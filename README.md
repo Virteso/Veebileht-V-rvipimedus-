@@ -1,4 +1,4 @@
-# Veebileht_Varvipimedus
+# Veebileht Värvipimedus
 
 See repositoorium on Tartu Ülikooli tudengite veebilehe rühmatöö jagamiseks ja kirjutamiseks.
 
