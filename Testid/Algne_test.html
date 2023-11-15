@@ -6,6 +6,56 @@
     <title>Algne test</title>
 </head>
 <body>
-    
+    <h2>Valige pildil näidatud number</h2>
+
+    <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fcolormax.org%2Fcolor-blind-test%2F&psig=AOvVaw2aA3hmKft32zP6rRuUbg2g&ust=1700091084169000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCOiWpPvSxIIDFQAAAAAdAAAAABAE" alt="no green">
+
+    <form >
+        <label>
+            <input type="radio" name="answer" value="option1"> 45
+        </label>
+        <br>
+        <label>
+            <input type="radio" name="answer" value="option2"> 46
+        </label>
+        <br>
+        <label>
+            <input type="radio" name="answer" value="option3"> 16
+        </label>
+        <br>
+        <label>
+            <input type="radio" name="answer" value="option4"> 15
+        </label>
+        <br>
+        <input type="button" value="Lõpeta test" onclick="checkAnswer()">
+    </form>
+
+    <p id="result">Tulemused: deuteranopia või protanopia = 0, tritanopia = 0</p>
+
+    <script>
+
+        var red_green = 0;
+        // deuteranopia and protanopia
+        var blue_yellow = 0; 
+        // tritanopia       
+
+        function checkAnswer() {
+            var selectedAnswer = document.querySelector('input[name="answer"]:checked');
+
+            if (selectedAnswer && selectedAnswer.value === "option1") {
+                red_green++
+            }
+
+            updateResults();
+
+        }
+
+        function updateResults() {
+            document.getElementById("result").innerHTML = "Tulemused: deuteranopia või protanopia = " + red_green + ", tritanopia = " + blue_yellow;
+        }
+    </script>
+
+
+
 </body>
 </html>
