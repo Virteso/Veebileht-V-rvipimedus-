@@ -1,9 +1,13 @@
 
 .topnav {
   background-color: #ffffff;
-  overflow: hidden;
+  overflow:hidden;
   display: flex;
   justify-content: center;
+  width: 100%;
+  height: 100px;
+  position: fixed;
+  top: 0;
 }
 
 .topnav a {
@@ -12,7 +16,7 @@
   text-align: center;
   padding: 20px 20px;
   text-decoration: none;
-  font-size: 35px;
+  font-size: 40px;
 }
 
 
@@ -30,7 +34,7 @@
 
 
 .dropdown .dropbtn {
-  font-size: 35px;
+  font-size: 40px;
   border: none;
   outline: none;
   color: rgb(0, 0, 0);
@@ -51,7 +55,7 @@
 }
 .dropdown-content {
   display: none;
-  position: absolute;
+  position: fixed;
   background-color: #f9f9f9;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -91,21 +95,32 @@ body{
 
 
 
-.picture{
-  width: 50%;
-  height: 91.6%;
-  position:absolute;
-  float: left;
-  background: url('https://cdn.shopify.com/s/files/1/0010/9215/7503/t/5/assets/Deutan_Color_Blindness.png?1580019767571496456');
+.toppicture{
+  height: 600px;
+  width:100%;
+  position:static;
+  float: top;
   background-size:cover;
+  overflow: hidden;
+
+}
+.glassesimage {
+  display: block;
+  width: 100%;
+  height: 600px;
+  position: static;
+  bottom: 0;
 }
 
+
+
 .main{
-  width: 50%;
-  height: 93%;
-  position: relative;
+  width: 100%;
+  position:static;
   float: left;
-  margin-left: 50%;
+  margin-left: 0%;
+  margin-top: 4.4%;
+  
   display: block;
   justify-content: center;
   text-align: center;
@@ -118,6 +133,7 @@ body{
   display:block;
   font-size: 70px;
   text-align: center;
+  margin-top: 0%;
 }
 #pealehttekst{
   width:auto;
@@ -128,8 +144,6 @@ body{
   text-align: center;
   margin: 100px;
 }
-
-
 .buttontest{
   text-align: center;
   margin-top:0%;
@@ -143,14 +157,14 @@ body{
 .buttoninfo {
   margin-left: 10%;
   font-size: 50px;
-  color: black;
   display: inline-block;
   animation: slideIn 1s;
   text-decoration: none;
   text-align: center;
-  color: black;
+  color: #000000;
   
 }
+
 
 @keyframes slideIn {
   from{
