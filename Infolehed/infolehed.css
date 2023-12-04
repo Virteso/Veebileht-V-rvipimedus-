@@ -1,0 +1,32 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    margin-left: 60px;
+    margin-right: 60px;
+}
+
+h1 {
+    color: #000000;
+    font-size: 60px;
+}
+
+p {
+    color: #000000;
+    line-height: 1.5;
+}
+
+.text {
+    margin-bottom: 20px;
+    font-size: 24px;
+    margin-left: 120px;
+    margin-right: 120px;
+}
+
+.image-container {
+    text-align: center;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
