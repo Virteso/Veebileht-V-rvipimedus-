@@ -99,7 +99,7 @@ body{
   height: 600px;
   width:100%;
   position:static;
-  float: top;
+  float: none;
   background-size:cover;
   overflow: hidden;
 
