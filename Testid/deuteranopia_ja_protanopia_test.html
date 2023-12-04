@@ -1,12 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-    <!-- kood ei tööta -->
+
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="testistyle.css">
+    <link rel="stylesheet" href="main.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Algne test</title>
 </head>
 <body>
+
+
+    <div class="topnav">
+        <a class="active" href="/Pealeht.html">Pealeht</a>
+        <a href="deuteranopia_ja_protanopia_test.html">Testid</a>
+        
+        <div class="dropdown">
+            <button class="dropbtn"> Loe rohkem </button>
+            <div class="dropdown-content">
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+            </div>
+        </div>
+    
+    </div>
 
     <h1> Deuteranopia ja protanopia test </h1>
     <!-- red_green test -->
@@ -14,11 +32,10 @@
     <!-- jpg number on our site; background and number; jpg number on https://colormax.org/color-blind-test/; correct answer -->
 
     <!-- 1; green and orange; 9; answer 45 -->
-    <h2>Valige pildil näidatud number</h2>
 
-    <img src="https://cdn-beaai.nitrocdn.com/DsHNrqyidSdrnEUwxpnDFmLjguAlTfrt/assets/images/optimized/rev-75266a5/colormax.org/wp-content/uploads/2015/08/colorblind-test-image9.jpg" alt="">
-
-    <form >
+    <form id="question_1">
+        <h2>Valige pildil näidatud number</h2>
+        <img src="testipildid/test45.webp" alt="">
         <label>
             <input type="radio" name="answer_1" value="option2"> 46
         </label>
@@ -32,35 +49,37 @@
         <label>
             <input type="radio" name="answer_1" value="option4"> 15
         </label>
+
+        <button type="button" onclick="checkAnswer(1)">Vastama</button>
     </form>
 
     <!-- 2; red and green; 1; answer 7-->
-    <h2>Valige pildil näidatud number</h2>
 
-    <img src="https://cdn-beaai.nitrocdn.com/DsHNrqyidSdrnEUwxpnDFmLjguAlTfrt/assets/images/optimized/rev-75266a5/colormax.org/wp-content/uploads/2015/08/colorblind-test-image1.jpg" alt="">
-
-    <form >
-        <label>
-            <input type="radio" name="answer_2" value="option2"> 1
-        </label>
-        <label>
-            <input type="radio" name="answer_2" value="option3"> 4
-        </label>
-        <br>
-        <label>
-            <input type="radio" name="answer_2" value="option4"> 8
-        </label>
-        <label>
-            <input type="radio" name="answer_2" value="correct_2"> 7
-        </label>
-    </form>
+        <form id="question_2" style="display: none;">
+        <h2>Valige pildil näidatud number</h2>
+        <img src="testipildid/test7.webp" alt="">
+            <label>
+                <input type="radio" name="answer_2" value="option2"> 1
+            </label>
+            <label>
+                <input type="radio" name="answer_2" value="option3"> 4
+            </label>
+            <br>
+            <label>
+                <input type="radio" name="answer_2" value="option4"> 8
+            </label>
+            <label>
+                <input type="radio" name="answer_2" value="correct_2"> 7
+            </label>
+            <button type="button" onclick="checkAnswer(2)">Vastama</button>
+        </form>
 
     <!-- 3; grey and red; 3; answer 26-->
-    <h2>Valige pildil näidatud number</h2>
 
-    <img src="https://cdn-beaai.nitrocdn.com/DsHNrqyidSdrnEUwxpnDFmLjguAlTfrt/assets/images/optimized/rev-75266a5/colormax.org/wp-content/uploads/2015/08/colorblind-test-image3.jpg" alt="">
-
-    <form >
+        
+        <form id="question_3" style="display: none;">
+            <h2>Valige pildil näidatud number</h2>
+            <img src="testipildid/test26.webp" alt="">
         <label>
             <input type="radio" name="answer_3" value="option2"> 35
         </label>
@@ -74,14 +93,15 @@
         <label>
             <input type="radio" name="answer_3" value="option4"> 78
         </label>
+        <button type="button" onclick="checkAnswer(3)">Vastama</button>
     </form>
 
     <!-- 4; orange and green; 8; answer 16-->
-    <h2>Valige pildil näidatud number</h2>
 
-    <img src="https://cdn-beaai.nitrocdn.com/DsHNrqyidSdrnEUwxpnDFmLjguAlTfrt/assets/images/optimized/rev-75266a5/colormax.org/wp-content/uploads/2015/08/colorblind-test-image8.jpg" alt="">
 
-    <form >
+    <form id="question_4" style="display: none;">
+        <h2>Valige pildil näidatud number</h2>
+        <img src="testipildid/test16.webp" alt="">
         <label>
             <input type="radio" name="answer_4" value="correct_4"> 16
         </label>
@@ -95,13 +115,16 @@
         <label>
             <input type="radio" name="answer_4" value="option4"> 15
         </label>
+
+        <button type="button" onclick="checkAnswer(4)">Vastama</button>
     </form>
 
     <!-- 5; orange and green; 6; answer 73-->
-    <h2>Valige pildil näidatud number</h2>
 
-    <img src="https://cdn-beaai.nitrocdn.com/DsHNrqyidSdrnEUwxpnDFmLjguAlTfrt/assets/images/optimized/rev-75266a5/colormax.org/wp-content/uploads/2015/08/colorblind-test-image6.jpg" alt="">
-    <form >
+
+    <form id="question_5" style="display: none;">
+        <h2>Valige pildil näidatud number</h2>
+        <img src="testipildid/test73.webp" alt="">
         <label>
             <input type="radio" name="answer_5" value="option2"> 78
         </label>
@@ -115,14 +138,15 @@
         <label>
             <input type="radio" name="answer_5" value="option4"> 79
         </label>
+        <button type="button" onclick="checkAnswer(5)">Vastama</button>
     </form>
 
     <!-- 6; green and orange; 11; answer 29-->
     
-    <h2>Valige pildil näidatud number</h2>
-    <img src="https://cdn-beaai.nitrocdn.com/DsHNrqyidSdrnEUwxpnDFmLjguAlTfrt/assets/images/optimized/rev-75266a5/colormax.org/wp-content/uploads/2015/08/colorblind-test-image11.jpg" alt="">
 
-    <form >
+    <form id="question_6" style="display: none;">
+        <h2>Valige pildil näidatud number</h2>
+        <img src="testipildid/test29.webp" alt="">
         <label>
             <input type="radio" name="answer_6" value="option2"> 28
         </label>
@@ -137,14 +161,14 @@
             <input type="radio" name="answer_6" value="correct_6"> 29
         </label>
         <br>
+        <button type="button" onclick="checkAnswer(6)">Vastama</button>
     </form>
 
     <!-- 7; grey ang orange; 10; answer 12-->
-    <h2>Valige pildil näidatud number</h2>
 
-    <img src="https://cdn-beaai.nitrocdn.com/DsHNrqyidSdrnEUwxpnDFmLjguAlTfrt/assets/images/optimized/rev-75266a5/colormax.org/wp-content/uploads/2015/08/colorblind-test-image10.jpg" alt="">
-
-    <form >
+    <form id="question_7" style="display: none;">
+        <h2>Valige pildil näidatud number</h2>
+        <img src="testipildid/test12.webp" alt="">
         <label>
             <input type="radio" name="answer_7" value="correct_7"> 12
         </label>
@@ -158,14 +182,14 @@
         <label>
             <input type="radio" name="answer_7" value="option4"> 72
         </label>
+        <button type="button" onclick="checkAnswer(7)">Vastama</button>
     </form>
 
     <!-- 8; green and orange; 5; answer 6-->
-    <h2>Valige pildil näidatud number</h2>
 
-    <img src="https://cdn-beaai.nitrocdn.com/DsHNrqyidSdrnEUwxpnDFmLjguAlTfrt/assets/images/optimized/rev-75266a5/colormax.org/wp-content/uploads/2015/08/colorblind-test-image5.jpg" alt="">
-
-    <form >
+    <form id="question_8" style="display: none;">
+        <h2>Valige pildil näidatud number</h2>
+        <img src="testipildid/greentest6.webp" alt="">
         <label>
             <input type="radio" name="answer_8" value="option2"> 8
         </label>
@@ -179,14 +203,19 @@
         <label>
             <input type="radio" name="answer_8" value="option4"> 5
         </label>
+        <button type="button" onclick="checkAnswer(8)">Vastama</button>
     </form>
 
+
     <!-- 9; green and orange; 12; answer 8-->
-    <h2>Valige pildil näidatud number</h2>
 
-    <img src="https://cdn-beaai.nitrocdn.com/DsHNrqyidSdrnEUwxpnDFmLjguAlTfrt/assets/images/optimized/rev-75266a5/colormax.org/wp-content/uploads/2015/08/colorblind-test-image12.jpg" alt="">
 
-    <form >
+    
+
+    <form id="question_9" style="display: none;">
+        <h2>Valige pildil näidatud number</h2>
+        <img src="testipildid/test9.webp" alt="">
+        
         <label>
             <input type="radio" name="answer_9" value="option2"> 0
         </label>
@@ -200,13 +229,14 @@
         <label>
             <input type="radio" name="answer_9" value="option4"> 9
         </label>
+        <button type="button" onclick="checkAnswer(9)">Vastama</button>
     </form>
 
     <!-- 10; orange and green; 4; answer 15-->
-    <h2>Valige pildil näidatud number</h2>
 
-    <img src="https://cdn-beaai.nitrocdn.com/DsHNrqyidSdrnEUwxpnDFmLjguAlTfrt/assets/images/optimized/rev-75266a5/colormax.org/wp-content/uploads/2015/08/colorblind-test-image4.jpg" alt="">
-    <form >
+    <form id="question_10" style="display: none;">
+        <h2>Valige pildil näidatud number</h2>
+        <img src="testipildid/test15.webp" alt="">
         <label>
             <input type="radio" name="answer_10" value="option2"> 46
         </label>
@@ -220,14 +250,15 @@
         <label>
             <input type="radio" name="answer_10" value="option4"> 75
         </label>
+        <button type="button" onclick="checkAnswer(10)">Vastama</button>
     </form>
 
     <!-- 11; green and orange; 2; answer 6-->
-    <h2>Valige pildil näidatud number</h2>
 
-    <img src="https://cdn-beaai.nitrocdn.com/DsHNrqyidSdrnEUwxpnDFmLjguAlTfrt/assets/images/optimized/rev-75266a5/colormax.org/wp-content/uploads/2015/08/colorblind-test-image2.jpg" alt="">
 
-    <form >
+    <form id="question_11" style="display: none;">
+        <h2>Valige pildil näidatud number</h2>
+        <img src="testipildid/testlight6.webp" alt="">
         <label>
             <input type="radio" name="answer_11" value="correct_11"> 6
         </label>
@@ -241,16 +272,17 @@
         <label>
             <input type="radio" name="answer_11" value="option4"> 3
         </label>
+        <button type="button" onclick="checkAnswer(11)">Vastama</button>
     </form>
 
     <!-- 12; orange and green; 7; answer 5-->
-    <h2>Valige pildil näidatud number</h2>
 
-    <img src="https://cdn-beaai.nitrocdn.com/DsHNrqyidSdrnEUwxpnDFmLjguAlTfrt/assets/images/optimized/rev-75266a5/colormax.org/wp-content/uploads/2015/08/colorblind-test-image7.jpg" alt="">
 
-    <form >
+    <form id="question_12" style="display: none;">
+        <h2>Valige pildil näidatud number</h2>
+        <img src="testipildid/test5.webp" alt="">
         <label>
-            <input type="radio" name="answer_12" value="option2"> 6
+            <input type="radio" name="answer_12" value="option2"> 6 
         </label>
         <label>
             <input type="radio" name="answer_12" value="correct_12"> 5
@@ -264,39 +296,47 @@
         </label>
         <br>
         <br>
-
         <input type="button" value="Lõpeta test" onclick="finishTest()">
     </form>
 
     <p id="result">Tulemused: deuteranopia või protanopia = 0/12</p>
     
     <script>
-        var red_green = 0;
-        // deuteranopia and protanopia
-
-        function checkAnswer() {
-            for (var i = 1; i <= 12; i++) {
-                var correctAnswer = "correct_" + i;
-                var selectedAnswer = document.querySelector('input[name="answer_' + i + '"]:checked');
-
-                if (selectedAnswer && selectedAnswer.value === correctAnswer) {
-                    red_green++;
-                }
+        var red_green = 0; // переменная для подсчета правильных ответов
+    
+        function checkAnswer(questionNumber) {
+            var correctAnswer = "correct_" + questionNumber;
+            var selectedAnswer = document.querySelector('input[name="answer_' + questionNumber + '"]:checked');
+    
+            if (selectedAnswer && selectedAnswer.value === correctAnswer) {
+                red_green++;
+            }
+    
+            // Скрываем текущий вопрос
+            document.getElementById("question_" + questionNumber).style.display = "none";
+    
+            // Показываем следующий вопрос (если есть)
+            var nextQuestionNumber = questionNumber + 1;
+            if (nextQuestionNumber <= 12) {
+                document.getElementById("question_" + nextQuestionNumber).style.display = "block";
             }
         }
-
+    
         function updateResults() {
-            red_green = 0;
-            checkAnswer();
+            // Обновляем результаты
             document.getElementById("result").innerHTML = "Tulemused: deuteranopia või protanopia = " + red_green + "/12";
         }
-
+    
         function finishTest() {
+            // Проверяем ответы на последний вопрос
+            checkAnswer(12);
+    
+            // Обновляем результаты
             updateResults();
-            // You can add any additional logic you need when finishing the test
+    
+            // Можете добавить любую дополнительную логику, которая вам нужна при завершении теста
         }
     </script>
-    
 
 
 
